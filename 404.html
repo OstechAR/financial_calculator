@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Oakridge Calculator</title>
+<style>
+  body { margin: 0; padding: 40px 20px; background: #000000; color: #F5F7FA; font-family: system-ui, sans-serif; }
+  a { color: #F5F7FA; }
+</style>
+<script>
+// Short links for video descriptions.
+// calculator.oakridgepartners.ca/8apr  ->  /?utm_source=youtube&utm_medium=description&utm_campaign=8apr
+// GitHub Pages shows this file for any address that has no page of its own,
+// so every new short link works without adding a file.
+(function () {
+  var slug = location.pathname.replace(/^\/+|\/+$/g, '').split('/')[0]
+    .toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40);
+  var target = '/';
+  if (slug) {
+    target += '?utm_source=youtube&utm_medium=description&utm_campaign=' + encodeURIComponent(slug);
+  }
+  location.replace(target);
+})();
+</script>
+</head>
+<body>
+<p><a href="/">Open the calculator</a></p>
+</body>
+</html>
